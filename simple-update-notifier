@@ -1,0 +1,4 @@
+#!/bin/bash
+# simple update notifier
+# a very simplistic update notification script written 
+# in bash, using notify-send and kdialog. 
