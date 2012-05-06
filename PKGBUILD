@@ -35,4 +35,6 @@ build() {
 package() {
   cd "${srcdir}/${_pkgname}"
   install -Dm755 spun "${pkgdir}/usr/bin/spun"
+  install -Dm644 spun.conf "${pkgdir}/etc/spun.conf"
+  install -Dm755 spun.desktop "${pkgdir}/usr/share/autostart/spun.desktop"
 }
