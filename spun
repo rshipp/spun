@@ -4,26 +4,26 @@
 # in bash, using notify-send and kdialog. 
 
 [[ -r /etc/spun.conf ]] && source /etc/spun.conf
-[[ -r ~/.spunrc ]] && source ~/.spunrc
+[[ -r ~/.spunrc ]] && source ~/.spunrc || /bin/cp /etc/spun.conf ~/.spunrc
 daemon=${daemon-1}
 
 
 main() {
   if [[ $1 == -h || $1 == --help ]]; then
-    echo "Usage: spun [OPTIONS]"
-    echo "Options: "
-    echo "  -g, --gui           show the kdialog configuration GUI"
+    echo $"Usage: spun [OPTIONS]"
+    echo $"Options: "
+    echo $"  -g, --gui           show the kdialog configuration GUI"
   elif [[ $1 == -g || $1 == --gui ]]; then 
     gui=1
     gui &
   fi
   if [[ $gui == 1 ]]; then
-    checkgui || (echo "kdialog cannot be found"; exit 1)
+    checkgui || (echo $"kdialog cannot be found"; exit 1)
   fi
   # Calculate seconds to sleep:
   [[ $waittime -le 10080 && $waittime -ge 1 ]] && 
     let sleeptime=$waittime*60 ||
-    fail "Bad value for 'waittime' variable.\nMust be an integer between 1 and 10080."
+    fail $"Bad value for 'waittime' variable.\nMust be an integer between 1 and 10080."
   if [[ $daemon == 1 ]]; then 
     daemon
   else
@@ -44,9 +44,9 @@ check() {
 }
 
 daemon() {
-  echo -n ":: Starting simple-update-notifier... "
+  echo -n $":: Starting simple-update-notifier... "
   dothings &
-  echo "         [Done]"
+  echo $"         [Done]"
 }
 
 checkgui() {
@@ -60,13 +60,16 @@ checkgui() {
 
 gui() {
   checkgui || exit 1
-  waittime=$(kdialog --inputbox "Minutes to wait between each check for updates:" 5)
+  waittime=$(kdialog --inputbox $"Minutes to wait between each check for updates:" 5 --title $"SPUN Config")
   waittime=$(echo $waittime | sed 's/[^0-9]//g')
   if ! [[ $waittime -le 10080 && $waittime -ge 1 ]]; then
-    fail "The value you specified is invalid."
+    fail $"The value you specified is invalid."
   else
-    sed -i "s/^waittime=.*/waittime=$waittime" "$conf"
+    sed -i "s/^waittime=.*/waittime=$waittime/" ~/.spunrc
   fi
+  icon=$(kdialog --geticon actions --title $"Choose notification icon - SPUN Config")
+  icon=${icon-info}
+  sed -i "s/^icon=.*/icon=$icon/" ~/.spunrc
 }
 
 dothings() {
@@ -82,7 +85,8 @@ dothings() {
 }
 
 notify() {
-  $notify $n_opts 'There are updates available!' "Updates are available for the following package(s): \n${upkgz[*]}"
+  $notify $n_opts $'There are updates available!' \
+    $"Updates are available for the following package(s): \n${upkgz[*]}"
 }
 
 fail() {
