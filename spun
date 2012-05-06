@@ -17,6 +17,9 @@ main() {
     gui=1
     gui &
   fi
+  if [[ $gui == 1 ]]; then
+    checkgui || (echo "kdialog cannot be found"; exit 1)
+  fi
   # Calculate seconds to sleep:
   [[ $waittime -le 10080 && $waittime -ge 1 ]] && 
     let sleeptime=$waittime*60 ||
