@@ -45,7 +45,6 @@ gui() {
 
 dothings() {
   upkgz=( )
-  [[ $daemon == 1 ]] && echo $BASHPID
   while true; do
     for pkg in $(check); do
       if isignored $pkg; then continue

@@ -1,5 +1,5 @@
 post_install() {
-  echo "To use this script, just add spun startup applications."
+  echo "To use this script, just add spun to your startup applications."
 }
 
 post_upgrade() {
