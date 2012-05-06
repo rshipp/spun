@@ -6,6 +6,7 @@ pkgrel=1
 pkgdesc='A simple pacman update notifier, using notify-send.'
 arch=('any')
 url='http://github.com/george2/spun/'
+screenshot='http://i.imgur.com/Mkq8I.png'
 license=('none')
 depends=('libnotify' 'bash' 'kde-baseapps')
 install=$pkgname.install

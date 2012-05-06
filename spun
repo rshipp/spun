@@ -48,8 +48,8 @@ gui() {
 }
 
 dothings() {
-  upkgz=( )
   while true; do
+    upkgz=( )
     for pkg in $(check); do
       if isignored $pkg; then continue
       else upkgz+=( $pkg ); fi
