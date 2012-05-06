@@ -1,26 +1,18 @@
 # Maintainer: george <rpubaddr0 {at} gmail [dot] com>
 
-pkgname=
-pkgver=
+pkgname=spun
+pkgver=0.1
 pkgrel=1
-pkgdesc=''
-arch=('i686' 'x86_64')
-url=''
-license=('')
-depends=()
-makedepends=()
-optdepends=()
-conflicts=()
-source=("${pkgname}-${pkgver}.tar.gz")
+pkgdesc='A simple pacman update notifier, using notify-send.'
+arch=('any')
+url='http://github.com/george2/spun/'
+license=('none')
+depends=('libnotify' 'bash')
+install=$pkgname.install
+source=('spun' 'spun.rc')
 sha256sums=('')
 
-build() {
-  cd "${pkgname}-${pkgver}"
-  ./configure --prefix=/usr
-  make
-}
-
 package() {
-  cd "/${pkgname}-${pkgver}"
-  make DESTDIR="${pkgdir}" install
+  install -Dm755 spun "${pkgdir}/usr/bin/spun"
+  install -Dm755 spun.rc "${pkgdir}/etc/rc.d/spun"
 }

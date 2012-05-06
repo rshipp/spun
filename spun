@@ -23,9 +23,9 @@ isignored() {
 }
 
 check() {
-  [[ -d /tmp/spun-$UID/sync/ ]] || mkdir -p /tmp/spun-$UID/sync/ && local dbpath=/tmp/spun-$UID/sync/
+  [[ -d /tmp/spun-$UID/ ]] || mkdir -p /tmp/spun-$UID/ && local dbpath=/tmp/spun-$UID/sync
   fakeroot pacman -Sy --dbpath $dbpath >&2>/tmp/spun-$UID/log
-  pacman -Quq --dbpath $dbpath
+  pacman -Quq --dbpath $dbpath | tee -a /tmp/spun-$UID/log
 }
 
 daemon() {
@@ -35,7 +35,7 @@ daemon() {
 }
 
 gui() {
-  echo -n
+  echo -n # may be added later
 }
 
 dothings() {
@@ -43,7 +43,7 @@ dothings() {
   while true; do
     for pkg in $(check); do
       if isignored $pkg; then continue
-      else upkgz+=( $pkg )
+      else upkgz+=( $pkg ); fi
     done
     [[ -n $upkgz ]] && notify "${upkgz[@]}"
     sleep $sleeptime
