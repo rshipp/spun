@@ -28,9 +28,10 @@ isignored() {
 }
 
 check() {
-  [[ -d /tmp/spun-$UID/ ]] || mkdir -p /tmp/spun-$UID/ && local dbpath=/tmp/spun-$UID/sync
-  fakeroot pacman -Sy --dbpath $dbpath >&2>/tmp/spun-$UID/log
-  pacman -Quq --dbpath $dbpath | tee -a /tmp/spun-$UID/log
+  tmpdir=/tmp/spun-$UID/
+  [[ -d $tmpdir ]] || mkdir -p $tmpdir && local dbpath=$tmpdir
+  fakeroot pacman -Sy --dbpath $dbpath >&2>$tmpdir/log
+  pacman -Quq --dbpath $dbpath | tee -a $tmpdir/log
 }
 
 daemon() {
