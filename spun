@@ -2,14 +2,21 @@
 # simple pacman update notifier
 # a very simplistic update notification script written 
 # in bash, using notify-send and kdialog. 
-# NOTE: For this to work, 'pacman -Sy' must be allowed w/o password by sudo
 
+[[ -r /etc/spun.conf ]] && source /etc/spun.conf
+[[ -r ~/.spunrc ]] && source ~/.spunrc
 daemon=${daemon-1}
-pacmanconf=/etc/pacman.conf
-# Wait time in minutes before updating again - must be integer
-waittime=5
+
 
 main() {
+  if [[ $1 == -h || $1 == --help ]]; then
+    echo "Usage: spun [OPTIONS]"
+    echo "Options: "
+    echo "  -g, --gui           show the kdialog configuration GUI"
+  elif [[ $1 == -g || $1 == --gui ]]; then 
+    gui=1
+    gui &
+  fi
   # Calculate seconds to sleep:
   [[ $waittime -le 10080 && $waittime -ge 1 ]] && 
     let sleeptime=$waittime*60 ||
@@ -29,12 +36,8 @@ isignored() {
 }
 
 check() {
-  #tmpdir=/tmp/spun/
-  #[[ -d $tmpdir ]] || mkdir -p $tmpdir && local dbpath=$tmpdir
-  #fakeroot pacman -Syy --dbpath /tmp/spun >&2>$tmpdir/log
-  #pacman -Quq --dbpath $dbpath | tee -a $tmpdir/log
-  sudo pacman -Sy >&2>/dev/null
-  pacman -Quq
+  $update >&2>/dev/null
+  $check
 }
 
 daemon() {
@@ -43,8 +46,24 @@ daemon() {
   echo "         [Done]"
 }
 
+checkgui() {
+  if test -x $(which kdialog); then
+    return 0
+  else 
+    echo $"Sorry, kdialog cannot be found."
+    exit 1
+  fi
+}
+
 gui() {
-  echo -n # may be added later
+  checkgui || exit 1
+  waittime=$(kdialog --inputbox "Minutes to wait between each check for updates:" 5)
+  waittime=$(echo $waittime | sed 's/[^0-9]//g')
+  if ! [[ $waittime -le 10080 && $waittime -ge 1 ]]; then
+    fail "The value you specified is invalid."
+  else
+    sed -i "s/^waittime=.*/waittime=$waittime" "$conf"
+  fi
 }
 
 dothings() {
@@ -60,7 +79,7 @@ dothings() {
 }
 
 notify() {
-  notify-send -i info 'There are updates available!' "Updates are available for the following package(s): \n${upkgz[*]}"
+  $notify $n_opts 'There are updates available!' "Updates are available for the following package(s): \n${upkgz[*]}"
 }
 
 fail() {
