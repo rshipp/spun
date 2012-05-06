@@ -10,11 +10,13 @@ notified=( )
 
 
 main() {
-  if [[ $1 == -h || $1 == --help ]]; then
+  if [[ $1 == '-h' || $1 == '--help' ]]; then
+    echo $"Simple pacman update notifier, v0.2"
     echo $"Usage: spun [OPTIONS]"
     echo $"Options: "
     echo $"  -g, --gui           show the kdialog configuration GUI"
-  elif [[ $1 == -g || $1 == --gui ]]; then 
+    exit 0
+  elif [[ $1 == '-g' || $1 == '--gui' ]]; then 
     gui=1
     gui &
   fi
@@ -69,7 +71,9 @@ gui() {
   fi
   icon=$(kdialog --geticon actions --title $"Choose notification icon - SPUN Config")
   icon=${icon-info}
-  sed -i "s/^icon=.*/icon=$icon/" ~/.spunrc
+  sed -i "s/^icon=.*/icon=$icon/" ~/.spunrc && kdialog --msgbox $"Configuration saved." || 
+    kdialog --error $"Configuration could not be saved.\nMake sure /etc/spun.conf exists and ~/.spunrc is writable."
+  exit 0
 }
 
 dothings() {
@@ -100,4 +104,4 @@ fail() {
   exit 1
 }
 
-main
+main "$@"
