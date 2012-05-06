@@ -10,7 +10,7 @@ license=('none')
 depends=('libnotify' 'bash' 'kde-baseapps')
 install=$pkgname.install
 source=('spun')
-md5sums=('a1129cc83f52c182ce69356d138b0ceb')
+md5sums=('c175a69f6b4729d9ac60209c2ee270ac')
 
 package() {
   install -Dm755 spun "${pkgdir}/usr/bin/spun"

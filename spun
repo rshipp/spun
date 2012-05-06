@@ -2,6 +2,7 @@
 # simple pacman update notifier
 # a very simplistic update notification script written 
 # in bash, using notify-send and kdialog. 
+# NOTE: For this to work, 'pacman -Sy' must be allowed w/o password by sudo
 
 daemon=${daemon-1}
 pacmanconf=/etc/pacman.conf
@@ -28,10 +29,12 @@ isignored() {
 }
 
 check() {
-  tmpdir=/tmp/spun-$UID/
-  [[ -d $tmpdir ]] || mkdir -p $tmpdir && local dbpath=$tmpdir
-  fakeroot pacman -Sy --dbpath $dbpath >&2>$tmpdir/log
-  pacman -Quq --dbpath $dbpath | tee -a $tmpdir/log
+  #tmpdir=/tmp/spun/
+  #[[ -d $tmpdir ]] || mkdir -p $tmpdir && local dbpath=$tmpdir
+  #fakeroot pacman -Syy --dbpath /tmp/spun >&2>$tmpdir/log
+  #pacman -Quq --dbpath $dbpath | tee -a $tmpdir/log
+  sudo pacman -Sy >&2>/dev/null
+  pacman -Quq
 }
 
 daemon() {
