@@ -3,6 +3,7 @@
 # a very simplistic update notification script written 
 # in bash, using notify-send and kdialog. 
 
+daemon=${daemon-1}
 pacmanconf=/etc/pacman.conf
 # Wait time in minutes before updating again - must be integer
 waittime=5
@@ -12,7 +13,11 @@ main() {
   [[ $waittime -le 10080 && $waittime -ge 1 ]] && 
     let sleeptime=$waittime*60 ||
     fail "Bad value for 'waittime' variable.\nMust be an integer between 1 and 10080."
-  dothings
+  if [[ $daemon == 1 ]]; then 
+    dothings &
+  else
+    dothings
+  fi
 }
 
 isignored() {
@@ -40,6 +45,7 @@ gui() {
 
 dothings() {
   upkgz=( )
+  [[ $daemon == 1 ]] && echo $BASHPID
   while true; do
     for pkg in $(check); do
       if isignored $pkg; then continue
