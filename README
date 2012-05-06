@@ -1,0 +1,1 @@
+A simple pacman update notifier, using notify-send and kdialog.
