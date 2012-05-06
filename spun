@@ -5,7 +5,8 @@
 
 [[ -r /etc/spun.conf ]] && source /etc/spun.conf
 [[ -r ~/.spunrc ]] && source ~/.spunrc || /bin/cp /etc/spun.conf ~/.spunrc
-daemon=${daemon-1}
+daemon=${daemon-1} waittime=${waittime-5}
+notified=( )
 
 
 main() {
@@ -60,8 +61,7 @@ checkgui() {
 
 gui() {
   checkgui || exit 1
-  waittime=$(kdialog --inputbox $"Minutes to wait between each check for updates:" 5 --title $"SPUN Config")
-  waittime=$(echo $waittime | sed 's/[^0-9]//g')
+  waittime=$(kdialog --inputbox $"Minutes to wait between each check for updates:" 5 --title $"SPUN Config" | sed 's/[^0-9]//g')
   if ! [[ $waittime -le 10080 && $waittime -ge 1 ]]; then
     fail $"The value you specified is invalid."
   else
@@ -85,8 +85,13 @@ dothings() {
 }
 
 notify() {
+  npkgz=( )
+  for pkg in "$@"; do 
+    grep "^$pkg$" <<< "${notified[@]}" && continue
+    npkgz+=( "$pkg" ) notified+=( "$pkg" )
+  done
   $notify $n_opts $'There are updates available!' \
-    $"Updates are available for the following package(s): \n${upkgz[*]}"
+    $"Updates are available for the following package(s): \n${npkgz[*]}"
 }
 
 fail() {

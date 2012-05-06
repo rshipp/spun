@@ -9,6 +9,7 @@ arch=('any')
 url='http://github.com/george2/spun/'
 screenshot='http://i.imgur.com/8eIE0.png'
 license=('none')
+conflicts=('spun')
 depends=('libnotify' 'bash')
 optdepends=('kde-baseapps: for the kdialog gui')
 install=spun.install
