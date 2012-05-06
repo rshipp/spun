@@ -17,7 +17,8 @@ case "$1" in
 
   stop)
     stat_busy "Stopping spun"
-    [ -e /var/run/spun.lck ] && kill $(cat /var/run/spun.lck) &> /dev/null
+    [ -e /var/run/spun.lck ] && kill $(cat /var/run/spun.lck) > /dev/null && 
+      rm /var/run/spun.lck
     if [ $? -gt 0 ]; then
       stat_fail
     else
