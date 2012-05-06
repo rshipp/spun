@@ -1,0 +1,63 @@
+#!/bin/bash
+# simple pacman update notifier
+# a very simplistic update notification script written 
+# in bash, using notify-send and kdialog. 
+
+pacmanconf=/etc/pacman.conf
+# Wait time in minutes before updating again - must be integer
+waittime=5
+
+main() {
+  # Calculate seconds to sleep:
+  [[ $waittime -le 10080 && $waittime -ge 1 ]] && 
+    let sleeptime=$waittime*60 ||
+    fail "Bad value for 'waittime' variable.\nMust be an integer between 1 and 10080."
+  dothings
+}
+
+isignored() {
+  IFS=$'\n'" "
+  local ignoredpkgs=( $(grep '^ *IgnorePkg' "$pacmanconf" | cut -d '=' -f 2-) )
+  IFS=' '
+  grep -q "^$1$" <<< "${ignoredpkgs[@]}"
+}
+
+check() {
+  [[ -d /tmp/spun-$UID/sync/ ]] || mkdir -p /tmp/spun-$UID/sync/ && local dbpath=/tmp/spun-$UID/sync/
+  fakeroot pacman -Sy --dbpath $dbpath >&2>/tmp/spun-$UID/log
+  pacman -Quq --dbpath $dbpath
+}
+
+daemon() {
+  echo -n ":: Starting simple-update-notifier... "
+  dothings &
+  echo "         [Done]"
+}
+
+gui() {
+  echo -n
+}
+
+dothings() {
+  upkgz=( )
+  while true; do
+    for pkg in $(check); do
+      if isignored $pkg; then continue
+      else upkgz+=( $pkg )
+    done
+    [[ -n $upkgz ]] && notify "${upkgz[@]}"
+    sleep $sleeptime
+  done
+}
+
+notify() {
+  notify-send -i info 'There are updates available!' "Updates are availabe for the following package(s): \n${upkgz[*]}"
+}
+
+fail() {
+  [[ $gui != 1 ]] && printf "$1\n" ||
+    kdialog --error "$1"
+  exit 1
+}
+
+main
