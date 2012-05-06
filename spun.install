@@ -1,5 +1,5 @@
 post_install() {
-  echo "To use this script, just add spun to your DAEMONS list in /etc/rc.conf"
+  echo "To use this script, just add spun startup applications."
 }
 
 post_upgrade() {
@@ -7,5 +7,5 @@ post_upgrade() {
 }
 
 post_remove() {
-  echo "Don't forget to remove spun from your DAEMONS list!"
+  echo "Don't forget to remove spun from your startup applications!"
 }

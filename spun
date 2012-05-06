@@ -14,7 +14,7 @@ main() {
     let sleeptime=$waittime*60 ||
     fail "Bad value for 'waittime' variable.\nMust be an integer between 1 and 10080."
   if [[ $daemon == 1 ]]; then 
-    dothings &
+    daemon
   else
     dothings
   fi
