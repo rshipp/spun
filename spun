@@ -3,12 +3,6 @@
 # a very simplistic update notification script written 
 # in bash, using notify-send and kdialog. 
 
-[[ -r /etc/spun.conf ]] && source /etc/spun.conf
-[[ -r ~/.spunrc ]] && source ~/.spunrc || /bin/cp /etc/spun.conf ~/.spunrc
-daemon=${daemon-1} waittime=${waittime-5}
-notified=( )
-
-
 main() {
   if [[ $1 == '-h' || $1 == '--help' ]]; then
     echo $"Simple pacman update notifier, v0.2"
@@ -103,5 +97,10 @@ fail() {
     kdialog --error "$1"
   exit 1
 }
+
+[[ -r /etc/spun.conf ]] && source /etc/spun.conf || fail "/etc/spun.conf cannot be found or is invalid!"
+[[ -r ~/.spunrc ]] && source ~/.spunrc || /bin/cp /etc/spun.conf ~/.spunrc
+daemon=${daemon-1} waittime=${waittime-5}
+notified=( )
 
 main "$@"
