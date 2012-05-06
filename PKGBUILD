@@ -10,7 +10,8 @@ license=('none')
 depends=('libnotify' 'bash')
 install=$pkgname.install
 source=('spun' 'spun.rc')
-sha256sums=('')
+md5sums=('569cfb1239ddb18bcca4a4f0057aae43'
+         'd4d3cb0ff57f7e17afed111703afe277')
 
 package() {
   install -Dm755 spun "${pkgdir}/usr/bin/spun"
