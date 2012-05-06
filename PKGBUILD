@@ -2,7 +2,7 @@
 
 pkgname=spun
 pkgver=0.1
-pkgrel=1
+pkgrel=2
 pkgdesc='A simple pacman update notifier, using notify-send.'
 arch=('any')
 url='http://github.com/george2/spun/'
@@ -11,7 +11,7 @@ license=('none')
 depends=('libnotify' 'bash' 'kde-baseapps')
 install=$pkgname.install
 source=('spun')
-md5sums=('c175a69f6b4729d9ac60209c2ee270ac')
+md5sums=('ca21f880ca9583f5cc3540a462386465')
 
 package() {
   install -Dm755 spun "${pkgdir}/usr/bin/spun"
