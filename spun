@@ -71,7 +71,7 @@ gui() {
   fi
   nicon=$(kdialog --geticon actions --title $"Choose notification icon - SPUN Config")
   if [[ $nicon == "" ]]; then nicon=$icon; fi
-  sed -i "s/^icon=.*/icon='$nicon'/" ~/.spunrc && kdialog --msgbox $"Configuration saved." || 
+  sed -i "s/^icon=.*/icon='$nicon'/" ~/.spunrc && kdialog --msgbox $"Configuration saved.\nThe script must be restarted for changes to take effect." || 
     kdialog --error $"Configuration could not be saved.\nMake sure /etc/spun.conf exists and ~/.spunrc is writable."
   exit 0
 }
