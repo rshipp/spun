@@ -32,7 +32,9 @@ isignored() {
 }
 
 check() {
-  $update >&2>/dev/null
+  [[ -f $tmpdir ]] || mkdir -p "$tmpdir"
+  ln -s /var/lib/pacman/local "$tmpdir"
+  $update >&2>/tmp/spun/log
   $check
 }
 
