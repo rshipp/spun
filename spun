@@ -29,10 +29,11 @@ main() {
 }
 
 isignored() {
-  oifs=$IFS IFS=$'\n'
-  local ignoredpkgs=( $(grep '^ *IgnorePkg' "$pacmanconf" | cut -d '=' -f 2-) )
+  oifs=$IFS 
+  IFS=$'\n'
+  local ignoredpkgs=(  $(grep '^ *IgnorePkg' "$pacmanconf" | cut -d '=' -f 2-) )
   IFS=$oifs
-  grep -q "^$1$" <<< "${ignoredpkgs[@]}"
+  grep -q "^[ ]*$1[ ]*[^ ]*" <<< "${ignoredpkgs[@]}"
 }
 
 check() {
