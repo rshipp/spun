@@ -42,7 +42,7 @@ check() {
 }
 
 daemon() {
-  echo -n $":: Starting simple-update-notifier... "
+  echo -n $":: Starting spun... "
   dothings &
   echo $"         [Done]"
 }
