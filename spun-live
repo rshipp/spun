@@ -1,0 +1,108 @@
+#!/bin/bash
+# simple pacman update notifier
+# a very simplistic update notification script written 
+# in bash, using notify-send and kdialog. 
+
+main() {
+  if [[ $1 == '-h' || $1 == '--help' ]]; then
+    echo $"Simple pacman update notifier, v0.2"
+    echo $"Usage: spun [OPTIONS]"
+    echo $"Options: "
+    echo $"  -g, --gui           show the kdialog configuration GUI"
+    exit 0
+  elif [[ $1 == '-g' || $1 == '--gui' ]]; then 
+    gui=1
+    gui &
+  fi
+  if [[ $gui == 1 ]]; then
+    checkgui || (echo $"kdialog cannot be found"; exit 1)
+  fi
+  # Calculate seconds to sleep:
+  [[ $waittime -le 10080 && $waittime -ge 1 ]] && 
+    let sleeptime=$waittime*60 ||
+    fail $"Bad value for 'waittime' variable.\nMust be an integer between 1 and 10080."
+  if [[ $daemon == 1 ]]; then 
+    daemon
+  else
+    dothings
+  fi
+}
+
+isignored() {
+  IFS=$'\n'" "
+  local ignoredpkgs=( $(grep '^ *IgnorePkg' "$pacmanconf" | cut -d '=' -f 2-) )
+  IFS=' '
+  grep -q "^$1$" <<< "${ignoredpkgs[@]}"
+}
+
+check() {
+  $update >&2>/dev/null
+  $check
+}
+
+daemon() {
+  echo -n $":: Starting simple-update-notifier... "
+  dothings &
+  echo $"         [Done]"
+}
+
+checkgui() {
+  if test -x $(which kdialog); then
+    return 0
+  else 
+    echo $"Sorry, kdialog cannot be found."
+    exit 1
+  fi
+}
+
+gui() {
+  checkgui || exit 1
+  waittime=$(kdialog --inputbox $"Minutes to wait between each check for updates:" 5 --title $"SPUN Config" | sed 's/[^0-9]//g')
+  if ! [[ $waittime -le 10080 && $waittime -ge 1 ]]; then
+    fail $"The value you specified is invalid."
+  else
+    sed -i "s/^waittime=.*/waittime=$waittime/" ~/.spunrc
+  fi
+  icon=$(kdialog --geticon actions --title $"Choose notification icon - SPUN Config")
+  icon=${icon-info}
+  sed -i "s/^icon=.*/icon=$icon/" ~/.spunrc && kdialog --msgbox $"Configuration saved." || 
+    kdialog --error $"Configuration could not be saved.\nMake sure /etc/spun.conf exists and ~/.spunrc is writable."
+  exit 0
+}
+
+dothings() {
+  while true; do
+    upkgz=( )
+    for pkg in $(check); do
+      if isignored $pkg; then continue
+      else upkgz+=( $pkg ); fi
+    done
+    [[ -n $upkgz ]] && notify "${upkgz[@]}"
+    sleep $sleeptime
+  done
+}
+
+notify() {
+  npkgz=( )
+  for pkg in "$@"; do 
+    grep "^$pkg$" <<< "${notified[@]}" && continue
+    npkgz+=( "$pkg" ) notified+=( "$pkg" )
+  done
+  $notify $n_opts $'There are updates available!' \
+    $"Updates are available for the following package(s): \n${npkgz[*]} \
+Run 'sudo pacman -Syu' to update.\n \
+<a href=http://www.chakra-linux.org/wiki/index.php/Pacman>Visit the Chakra wiki</a> to learn more about Pacman."
+}
+
+fail() {
+  [[ $gui != 1 ]] && printf "$1\n" ||
+    kdialog --error "$1"
+  exit 1
+}
+
+[[ -r /etc/spun.conf ]] && source /etc/spun.conf || fail "/etc/spun.conf cannot be found or is invalid!"
+[[ -r ~/.spunrc ]] && source ~/.spunrc || /bin/cp /etc/spun.conf ~/.spunrc
+daemon=${daemon-1} waittime=${waittime-5}
+notified=( )
+
+main "$@"
