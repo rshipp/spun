@@ -2,8 +2,8 @@
 
 pkgname=spun-git
 _pkgname=spun
-pkgver=20120506
-pkgrel=3
+pkgver=20120507
+pkgrel=1
 pkgdesc='A simple pacman update notifier, using notify-send.'
 arch=('any')
 url='http://github.com/george2/spun/'
