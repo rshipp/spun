@@ -5,7 +5,7 @@
 
 main() {
   if [[ $1 == '-h' || $1 == '--help' ]]; then
-    echo $"Simple pacman update notifier, v0.2"
+    echo $"Simple pacman update notifier, v0.2.1"
     echo $"Usage: spun [OPTIONS]"
     echo $"Options: "
     echo $"  -g, --gui           show the kdialog configuration GUI"
@@ -29,9 +29,9 @@ main() {
 }
 
 isignored() {
-  IFS=$'\n'" "
+  oifs=$IFS IFS=$'\n'
   local ignoredpkgs=( $(grep '^ *IgnorePkg' "$pacmanconf" | cut -d '=' -f 2-) )
-  IFS=' '
+  IFS=$oifs
   grep -q "^$1$" <<< "${ignoredpkgs[@]}"
 }
 
@@ -74,21 +74,20 @@ dothings() {
   while true; do
     upkgz=( )
     for pkg in $(check); do
-      if isignored $pkg; then continue
-      else upkgz+=( $pkg ); fi
+      isignored $pkg || upkgz+=( $pkg )
     done
-    [[ -n $upkgz ]] && notify "${upkgz[@]}"
-    sleep $sleeptime
+    [[ -n ${upkgz[@]} ]] && notify "${upkgz[@]}"
+    sleep 3 #$sleeptime
   done
 }
 
 notify() {
   npkgz=( )
   for pkg in "$@"; do 
-    grep "^$pkg$" <<< "${notified[@]}" && continue
-    npkgz+=( "$pkg" ) notified+=( "$pkg" )
+    echo grepping $pkg...
+    grep " $pkg " <<< "${notified[@]}" || npkgz+=( "$pkg" ) notified+=( " $pkg " )
   done
-  $notify $n_opts $'There are updates available!' \
+  [[ -n "${npkgz[@]}" ]] && $notify $n_opts $'There are updates available!' \
     $"Updates are available for the following package(s): \n${npkgz[*]} \n\
 Run 'sudo pacman -Syu' to update.\n \
 <a href=http://www.chakra-linux.org/wiki/index.php/Pacman>Visit the Chakra wiki</a> to learn more about Pacman."
