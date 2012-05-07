@@ -12,7 +12,7 @@ main() {
     exit 0
   elif [[ $1 == '-g' || $1 == '--gui' ]]; then 
     gui=1
-    gui &
+    gui
   fi
   if [[ $gui == 1 ]]; then
     checkgui || (echo $"kdialog cannot be found"; exit 1)
