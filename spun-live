@@ -53,7 +53,7 @@ checkgui() {
 
 gui() {
   checkgui
-  nwaittime=$(kdialog --inputbox $"Minutes to wait between each check for updates:" 5 \
+  nwaittime=$(kdialog --inputbox $"Minutes to wait between each check for updates:" $waittime \
     --title $"SPUN Config" | sed 's/[^0-9].*//g') 
   if [[ $nwaittime == "" ]]; then nwaittime=$waittime; fi
   if ! [[ $nwaittime -le 10080 && $nwaittime -ge 1 ]]; then
