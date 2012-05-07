@@ -3,8 +3,8 @@
 /bin/cp spun spun-live
 ed spun-live << EOF
 /    $"Updates/c
-    $"Updates are available for the following package(s): \n${npkgz[*]} \
-Run 'sudo pacman -Syu' to update.\n \
+    $"Updates are available for the following package(s): \n\${npkgz[*]} \\
+Run 'sudo pacman -Syu' to update.\n \\
 <a href=http://www.chakra-linux.org/wiki/index.php/Pacman>Visit the Chakra wiki</a> to learn more about Pacman."
 .
 wq
