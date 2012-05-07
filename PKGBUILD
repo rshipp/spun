@@ -12,7 +12,6 @@ license=('none')
 conflicts=('spun' 'spun-live')
 depends=('libnotify' 'bash')
 optdepends=('kde-baseapps: for the kdialog gui')
-#install=spun.install
 
 _gitname="${_pkgname}"
 _gitroot="git://github.com/george2/${_gitname}.git"
