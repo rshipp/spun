@@ -17,8 +17,10 @@ main() {
   if [[ $gui == 1 ]]; then
     checkgui || (echo $"kdialog cannot be found"; exit 1)
   fi
-  kill -CONT $(cat "$tmpdir/pid" 2>/dev/null) 2>/dev/null && 
-    fail "spun is already running!\nonly one instance can be run at a time."
+  if [[ -r /tmp/spun/pid ]]; then
+    kill -CONT $(cat "$tmpdir/pid" 2>/dev/null) 2>/dev/null && 
+      fail "spun is already running!\nonly one instance can be run at a time."
+  fi
   # Calculate seconds to sleep:
   [[ $waittime -le 10080 && $waittime -ge 1 ]] && 
     let sleeptime=$waittime*60 ||
