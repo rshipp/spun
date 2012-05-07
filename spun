@@ -5,7 +5,7 @@
 
 main() {
   if [[ $1 == '-h' || $1 == '--help' ]]; then
-    echo $"Simple pacman update notifier, v0.2.1"
+    echo $"Simple pacman update notifier, v0.2.2"
     echo $"Usage: spun [OPTIONS]"
     echo $"Options: "
     echo $"  -g, --gui           show the kdialog configuration GUI"
