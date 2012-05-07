@@ -73,7 +73,7 @@ gui() {
 }
 
 dothings() {
-  [[ $daemon == 1 ]] && echo $BASHPID >> "$tmpdir/pid"
+  [[ $daemon == 1 ]] && echo $BASHPID > "$tmpdir/pid"
   while true; do
     upkgz=( )
     for pkg in $(check); do
