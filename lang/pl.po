@@ -92,7 +92,7 @@ msgid ""
 "Configuration could not be saved.\\nMake sure /etc/spun.conf exists and ~/."
 "spunrc is writable."
 msgstr ""
-Konfiguracja nie została zapisana.\\nSprawdź, czy /etc/spun.conf istnieje, a "
+"Konfiguracja nie została zapisana.\\nSprawdź, czy /etc/spun.conf istnieje, a "
 "~/.spunrc jest nadpisywalny."
 
 #: spun.sh:97
