@@ -17,83 +17,83 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: spun-live.sh:9
+#: spun-live:9
 msgid "Simple pacman update notifier, v0.2.4"
 msgstr ""
 
-#: spun-live.sh:10
+#: spun-live:10
 msgid "Usage: spun [OPTIONS]"
 msgstr ""
 
-#: spun-live.sh:11
+#: spun-live:11
 msgid "Options: "
 msgstr ""
 
-#: spun-live.sh:12
+#: spun-live:12
 msgid "  -g, --gui              show the kdialog configuration GUI"
 msgstr ""
 
-#: spun-live.sh:20
+#: spun-live:20
 msgid "kdialog cannot be found"
 msgstr ""
 
-#: spun-live.sh:25
+#: spun-live:25
 msgid "spun is already running!\\nonly one instance can be run at a time."
 msgstr ""
 
-#: spun-live.sh:30
+#: spun-live:30
 msgid ""
 "Bad value for 'waittime' variable.\\nMust be an integer between 1 and 10080."
 msgstr ""
 
-#: spun-live.sh:49
+#: spun-live:49
 msgid ":: Starting spun... "
 msgstr ""
 
-#: spun-live.sh:51
+#: spun-live:51
 msgid "                                                     [Done]"
 msgstr ""
 
-#: spun-live.sh:58
+#: spun-live:58
 msgid "Sorry, kdialog cannot be found."
 msgstr ""
 
-#: spun-live.sh:65
+#: spun-live:65
 msgid "Minutes to wait between each check for updates:"
 msgstr ""
 
-#: spun-live.sh:66
+#: spun-live:66
 msgid "SPUN Config"
 msgstr ""
 
-#: spun-live.sh:69
+#: spun-live:69
 msgid "The value you specified is invalid."
 msgstr ""
 
-#: spun-live.sh:73
+#: spun-live:73
 msgid "Choose notification icon - SPUN Config"
 msgstr ""
 
-#: spun-live.sh:75
+#: spun-live:75
 msgid ""
 "Configuration saved.\\nThe script must be restarted for changes to take "
 "effect."
 msgstr ""
 
-#: spun-live.sh:76
+#: spun-live:76
 msgid ""
 "Configuration could not be saved.\\nMake sure /etc/spun.conf exists and ~/."
 "spunrc is writable."
 msgstr ""
 
-#: spun-live.sh:97
+#: spun-live:97
 msgid "'There are updates available!'"
 msgstr ""
 
-#: spun-live.sh:98
+#: spun-live:98
 msgid "Updates are available for the following package(s): \\n"
 msgstr ""
 
-#: spun-live.sh:109
+#: spun-live:109
 msgid "/etc/spun.conf cannot be found or is invalid!"
 msgstr ""
