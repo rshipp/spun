@@ -1,5 +1,5 @@
 #: spun:9
-msgid "Simple pacman update notifier, v0.2.3"
+msgid "Simple pacman update notifier, v0.2.4"
 msgstr ""
 #: spun:10
 msgid "Usage: spun [OPTIONS]"
@@ -44,7 +44,7 @@ msgstr ""
 msgid "Configuration saved.\\nThe script must be restarted for changes to take effect."
 msgstr ""
 #: spun:76
-msgid "Configuration could not be saved.\\nMake sure /etspun.conf exists and ~/.spunrc is writable."
+msgid "Configuration could not be saved.\\nMake sure /etc/spun.conf exists and ~/.spunrc is writable."
 msgstr ""
 #: spun:97
 msgid "'There are updates available!'"
@@ -53,5 +53,5 @@ msgstr ""
 msgid "'Updates are available for the following package(s): \\n${npkgz[*]}'"
 msgstr ""
 #: spun:107
-msgid "/etspun.conf cannot be found or is invalid!"
+msgid "/etc/spun.conf cannot be found or is invalid!"
 msgstr ""
