@@ -99,9 +99,9 @@ msgid "'There are updates available!'"
 msgstr "«Hi ha actualitzacions disponibles!!»"
 
 #: spun:98
-msgid "'Updates are available for the following package(s): \\n${npkgz[*]}'"
+msgid "Updates are available for the following package(s): \\n"
 msgstr ""
-"«Hi ha actualitzacions disponibles per als seguents paquets: \\n${npkgopt[*]}»"
+"Hi ha actualitzacions disponibles per als seguents paquets: \\n"
 
 #: spun:107
 msgid "/etc/spun.conf cannot be found or is invalid!"
