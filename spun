@@ -2,6 +2,7 @@
 # simple pacman update notifier
 # a very simplistic update notification script written 
 # in bash, using notify-send and kdialog. 
+TEXTDOMAIN=spun
 
 main() {
   if [[ $1 == '-h' || $1 == '--help' ]]; then
@@ -21,7 +22,7 @@ main() {
   # Check to see if the script is already running
   if [[ -r /tmp/spun/pid ]]; then
     kill -CONT $(cat "$tmpdir/pid" 2>/dev/null) 2>/dev/null && 
-      fail "spun is already running!\nonly one instance can be run at a time."
+      fail $"spun is already running!\nonly one instance can be run at a time."
   fi
   # Calculate seconds to sleep:
   [[ $waittime -le 10080 && $waittime -ge 1 ]] && 
@@ -103,7 +104,7 @@ fail() {
   exit 1
 }
 
-[[ -r /etc/spun.conf ]] && source /etc/spun.conf || fail "/etc/spun.conf cannot be found or is invalid!"
+[[ -r /etc/spun.conf ]] && source /etc/spun.conf || fail $"/etc/spun.conf cannot be found or is invalid!"
 [[ -r ~/.spunrc ]] && source ~/.spunrc || /bin/cp /etc/spun.conf ~/.spunrc
 daemon=${daemon-1} waittime=${waittime-5} notified=( )
 

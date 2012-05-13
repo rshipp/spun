@@ -2,8 +2,8 @@
 
 pkgname=spun-git
 _pkgname=spun
-pkgver=20120507
-pkgrel=3
+pkgver=20120513
+pkgrel=1
 pkgdesc='A simple pacman update notifier, using notify-send.'
 arch=('any')
 url='http://github.com/george2/spun/'
@@ -15,6 +15,7 @@ optdepends=('kde-baseapps: for the kdialog gui')
 
 _gitname="${_pkgname}"
 _gitroot="git://github.com/george2/${_gitname}.git"
+_locales=( )
 
 
 build() {
@@ -37,4 +38,10 @@ package() {
   install -Dm755 spun "${pkgdir}/usr/bin/spun"
   install -Dm644 spun.conf "${pkgdir}/etc/spun.conf"
   install -Dm755 spun.desktop "${pkgdir}/usr/share/autostart/spun.desktop"
+
+  # localization
+  for lc in ${_locales[@]}; do
+    msgfmt -o "${pkgdir}/usr/share/locale/$lc/LC_MESSAGES/spun.mo" \
+      "$lc/spun.po"
+  done
 }
