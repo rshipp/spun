@@ -15,7 +15,7 @@ optdepends=('kde-baseapps: for the kdialog gui')
 
 _gitname="${_pkgname}"
 _gitroot="git://github.com/george2/${_gitname}.git"
-_locales=( )
+_locales=( ca pl )
 
 
 build() {
@@ -41,6 +41,7 @@ package() {
 
   # localization
   for lc in ${_locales[@]}; do
+    install -dm755 "${pkgdir}/usr/share/locale/$lc/LC_MESSAGES/"
     msgfmt -o "${pkgdir}/usr/share/locale/$lc/LC_MESSAGES/spun.mo" \
       "lang/$lc.po"
   done
