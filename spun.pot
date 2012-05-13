@@ -1,57 +1,57 @@
-#: ./spun:9
+#: spun:9
 msgid "Simple pacman update notifier, v0.2.3"
 msgstr ""
-#: ./spun:10
+#: spun:10
 msgid "Usage: spun [OPTIONS]"
 msgstr ""
-#: ./spun:11
+#: spun:11
 msgid "Options: "
 msgstr ""
-#: ./spun:12
+#: spun:12
 msgid "  -g, --gui              show the kdialog configuration GUI"
 msgstr ""
-#: ./spun:20
+#: spun:20
 msgid "kdialog cannot be found"
 msgstr ""
-#: ./spun:25
+#: spun:25
 msgid "spun is already running!\\nonly one instance can be run at a time."
 msgstr ""
-#: ./spun:30
+#: spun:30
 msgid "Bad value for 'waittime' variable.\\nMust be an integer between 1 and 10080."
 msgstr ""
-#: ./spun:49
+#: spun:49
 msgid ":: Starting spun... "
 msgstr ""
-#: ./spun:51
+#: spun:51
 msgid "                                                     [Done]"
 msgstr ""
-#: ./spun:58
+#: spun:58
 msgid "Sorry, kdialog cannot be found."
 msgstr ""
-#: ./spun:65
+#: spun:65
 msgid "Minutes to wait between each check for updates:"
 msgstr ""
-#: ./spun:65
+#: spun:65
 msgid "SPUN Config"
 msgstr ""
-#: ./spun:69
+#: spun:69
 msgid "The value you specified is invalid."
 msgstr ""
-#: ./spun:73
+#: spun:73
 msgid "Choose notification icon - SPUN Config"
 msgstr ""
-#: ./spun:75
+#: spun:75
 msgid "Configuration saved.\\nThe script must be restarted for changes to take effect."
 msgstr ""
-#: ./spun:76
-msgid "Configuration could not be saved.\\nMake sure /etc/spun.conf exists and ~/.spunrc is writable."
+#: spun:76
+msgid "Configuration could not be saved.\\nMake sure /etspun.conf exists and ~/.spunrc is writable."
 msgstr ""
-#: ./spun:97
+#: spun:97
 msgid "'There are updates available!'"
 msgstr ""
-#: ./spun:98
+#: spun:98
 msgid "'Updates are available for the following package(s): \\n${npkgz[*]}'"
 msgstr ""
-#: ./spun:107
-msgid "/etc/spun.conf cannot be found or is invalid!"
+#: spun:107
+msgid "/etspun.conf cannot be found or is invalid!"
 msgstr ""
