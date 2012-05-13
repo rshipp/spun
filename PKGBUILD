@@ -42,6 +42,6 @@ package() {
   # localization
   for lc in ${_locales[@]}; do
     msgfmt -o "${pkgdir}/usr/share/locale/$lc/LC_MESSAGES/spun.mo" \
-      "$lc/spun.po"
+      "lang/$lc.po"
   done
 }

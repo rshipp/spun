@@ -1,0 +1,109 @@
+# Header entry was created by Lokalize.
+#
+#: spun:10
+#: spun:9
+# Manuel Tortosa <manutortosa@chakra-project.org>, 2012.
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Mime-Version: 1.0"
+"Last-Translator: Manuel Tortosa <manutortosa@chakra-project.org>\n"
+"PO-Revision-Date: 2012-05-13 22:09+0200\n"
+"Project-Id-Version: \n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: spun:10
+#: spun:9
+msgid "Simple pacman update notifier, v0.2.4"
+msgstr "Un notificador d'actualitzacions del Pacman senzill, v0.2.4"
+
+#: spun:10
+msgid "Usage: spun [OPTIONS]"
+msgstr "Sintaxi: spun [OPCIONS]"
+
+#: spun:11
+msgid "Options: "
+msgstr "Opcions: "
+
+#: spun:12
+msgid "  -g, --gui              show the kdialog configuration GUI"
+msgstr "  -g, --gui              mostra la IGU de configuració del kdialog"
+
+#: spun:20
+msgid "kdialog cannot be found"
+msgstr "no s'ha pogut trobar el kdialog"
+
+#: spun:25
+msgid "spun is already running!\\nonly one instance can be run at a time."
+msgstr ""
+"l'spun ja s'està executant!\\nnomés es pot executar una instància alhora."
+
+#: spun:30
+msgid ""
+"Bad value for 'waittime' variable.\\nMust be an integer between 1 and 10080."
+msgstr ""
+"Valor erroni per a la variable «waittime»\\nHa de ser un sencer entre 1 i "
+"10080."
+
+#: spun:49
+msgid ":: Starting spun... "
+msgstr ":: S'està iniciant l'spun... "
+
+#: spun:51
+msgid "                                                     [Done]"
+msgstr "                                                     [Fet]"
+
+#: spun:58
+msgid "Sorry, kdialog cannot be found."
+msgstr "No s'ha pogut trobar el kdialog."
+
+#: spun:65
+msgid "Minutes to wait between each check for updates:"
+msgstr "Minuts d'espera entre cada comprovació de les actualitzacions:"
+
+#: spun:65
+msgid "SPUN Config"
+msgstr "Configuració de l'SPUN"
+
+#: spun:69
+msgid "The value you specified is invalid."
+msgstr "El valor que heu especificat no és vàlid."
+
+#: spun:73
+msgid "Choose notification icon - SPUN Config"
+msgstr "Trieu la icona de notificació - Configuració de l'SPUN"
+
+#: spun:75
+msgid ""
+"Configuration saved.\\nThe script must be restarted for changes to take "
+"effect."
+msgstr ""
+"S'ha desat la configuració\\nL'script s'ha de reiniciar per tal que els "
+"canvis siguin efectius."
+
+#: spun:76
+msgid ""
+"Configuration could not be saved.\\nMake sure /etc/spun.conf exists and "
+"~/.spunrc is writable."
+msgstr ""
+"No s'ha pogut desar la configuració\\nAssegureu-vos de que /etc/spun.conf "
+"existeix i de que ~/spunrc es escrivible."
+
+#: spun:97
+msgid "'There are updates available!'"
+msgstr "«Hi ha actualitzacions disponibles!!»"
+
+#: spun:98
+msgid "'Updates are available for the following package(s): \\n${npkgz[*]}'"
+msgstr ""
+"«Hi ha actualitzacions disponibles per als seguents paquets: \\n${npkgopt[*]}»"
+
+#: spun:107
+msgid "/etc/spun.conf cannot be found or is invalid!"
+msgstr "no s'ha pogut trobar /etc/spun.conf o no és vàlid!"
+
