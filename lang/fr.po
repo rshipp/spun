@@ -39,7 +39,7 @@ msgstr "kdialog est introuvable"
 
 #: spun-live:25
 msgid "spun is already running!\\nonly one instance can be run at a time."
-msgstr "spun est déjà lancé !\\nune seule instance peut être lancée à la fois.""
+msgstr "spun est déjà lancé !\\nune seule instance peut être lancée à la fois."
 
 #: spun-live:30
 msgid ""
