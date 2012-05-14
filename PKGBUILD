@@ -2,7 +2,7 @@
 
 pkgname=spun-git
 _pkgname=spun
-pkgver=20120513
+pkgver=20120514
 pkgrel=1
 pkgdesc='A simple pacman update notifier, using notify-send.'
 arch=('any')
@@ -15,7 +15,7 @@ optdepends=('kde-baseapps: for the kdialog gui')
 
 _gitname="${_pkgname}"
 _gitroot="git://github.com/george2/${_gitname}.git"
-_locales=( ca pl )
+_locales=( ca de es fr pl )
 
 
 build() {
