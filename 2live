@@ -2,10 +2,10 @@
 # convert spun to spun-live
 /bin/cp spun spun-live
 ed spun-live << EOF
-/    "'\$(gettext/c
-    "'\$(gettext "Updates are available for the following package(s): \n") \${npkgz[*]} \n\\
-Run \"sudo pacman -Syu\" to update.\n \\
-<a href=http://www.chakra-linux.org/wiki/index.php/Pacman>Visit the Chakra wiki</a> to learn more about Pacman.'"
+/Updates/c
+    \"$"Updates are available for the following package(s): \n" "\${npkgz[*]} \n\\
+Run 'sudo pacman -Syu' to update.\n \\
+<a href=http://www.chakra-linux.org/wiki/index.php/Pacman>Visit the Chakra wiki</a> to learn more about Pacman."\"
 .
 wq
 EOF
