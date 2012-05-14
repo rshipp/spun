@@ -95,7 +95,7 @@ notify() {
     grep -q " $pkg " <<< "${notified[@]}" || npkgz+=( "$pkg" ) notified+=( " $pkg " )
   done
   [[ -n "${npkgz[@]}" ]] && eval $notify $n_opts $"'There are updates available!'" \
-    "'$(gettext "Updates are available for the following package(s): \n") ${npkgz[*]}'"
+    \"$"Updates are available for the following package(s): \n" "${npkgz[*]}"\"
 }
 
 fail() {
