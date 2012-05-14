@@ -1,0 +1,108 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Olivier Tilmans <otilmans@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-13 15:06-0600\n"
+"PO-Revision-Date: 2012-05-14 10:58+0200\n"
+"Last-Translator: Olivier Tilmans <otilmans@gmail.com>\n"
+"Language-Team: French <kde-i18n-doc@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: spun-live:9
+msgid "Simple pacman update notifier, v0.2.4"
+msgstr "Simple notificateur de mise à jour pacman, v0.2.4"
+
+#: spun-live:10
+msgid "Usage: spun [OPTIONS]"
+msgstr "Utilisation : spun [OPTIONS]"
+
+#: spun-live:11
+msgid "Options: "
+msgstr "Options : "
+
+#: spun-live:12
+msgid "  -g, --gui              show the kdialog configuration GUI"
+msgstr "  -g, --gui              affiche le GUI kdialog de configuration"
+
+#: spun-live:20
+msgid "kdialog cannot be found"
+msgstr "kdialog est introuvable"
+
+#: spun-live:25
+msgid "spun is already running!\\nonly one instance can be run at a time."
+msgstr "spun est déjà lancé !\\nune seule instance peut être lancée à la fois.""
+
+#: spun-live:30
+msgid ""
+"Bad value for 'waittime' variable.\\nMust be an integer between 1 and 10080."
+msgstr ""
+"Mauvaise valeur pour la variable 'waittime'.\\nElle doit être un entier "
+"compris entre 1 et 100080."
+
+#: spun-live:49
+msgid ":: Starting spun... "
+msgstr ":: Lancement de SPUN ::"
+
+#: spun-live:51
+msgid "                                                     [Done]"
+msgstr "                                                     [Fait]"
+
+#: spun-live:58
+msgid "Sorry, kdialog cannot be found."
+msgstr "Désolé, kdialog est introuvable."
+
+#: spun-live:65
+msgid "Minutes to wait between each check for updates:"
+msgstr ""
+"Intervalle en minutes entre chaque vérification de disponibilité de mises à "
+"jour :"
+
+#: spun-live:66
+msgid "SPUN Config"
+msgstr "SPUN Config"
+
+#: spun-live:69
+msgid "The value you specified is invalid."
+msgstr "La valeur spécifiée est invalide."
+
+#: spun-live:73
+msgid "Choose notification icon - SPUN Config"
+msgstr "Choisissez l'icône de notification - SPUN Config"
+
+#: spun-live:75
+msgid ""
+"Configuration saved.\\nThe script must be restarted for changes to take "
+"effect."
+msgstr ""
+"Configuration enregistrée.\\nLe script doit être redémarré pour que les "
+"changements prennent effet."
+
+#: spun-live:76
+msgid ""
+"Configuration could not be saved.\\nMake sure /etc/spun.conf exists and ~/."
+"spunrc is writable."
+msgstr ""
+"La configuration n'a pu être enregistrée.\\nVérifiez que /etc/spun.conf "
+"existe et que ~/.spunrc est autorisé en écriture."
+
+#: spun-live:97
+msgid "'There are updates available!'"
+msgstr "'Il y a des mises à jour disponibles !'"
+ 
+#: spun-live:98
+msgid "Updates are available for the following package(s): \\n"
+msgstr ""
+"Des mises à jour sont disponibles pour le(s) paquet(s) suivant(s) : \\n"
+ 
+#: spun-live:109
+msgid "/etc/spun.conf cannot be found or is invalid!"
+msgstr "/etc/spun.conf est introuvable ou est invalide !"

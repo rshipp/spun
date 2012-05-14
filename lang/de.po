@@ -1,0 +1,105 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Michael Häsel <michael.haesel@googlemail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-13 15:06-0600\n"
+"PO-Revision-Date: 2012-05-14 07:34+0200\n"
+"Last-Translator: Michael Häsel <michael.haesel@googlemail.com>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: spun:9
+msgid "Simple pacman update notifier, v0.2.4"
+msgstr "Einfacher pacman-Aktualisierungsanzeiger, SPUN v0.2.4"
+
+#: spun:10
+msgid "Usage: spun [OPTIONS]"
+msgstr "Verwendung: spun [OPTIONEN]"
+
+#: spun:11
+msgid "Options: "
+msgstr "Optionen: "
+
+#: spun:12
+msgid "  -g, --gui              show the kdialog configuration GUI"
+msgstr "  -g, --gui              zeigt die kdialog-Konfigurationsoberfläche"
+
+#: spun:20
+msgid "kdialog cannot be found"
+msgstr "kdialog kann nicht gefunden werden"
+
+#: spun:25
+msgid "spun is already running!\\nonly one instance can be run at a time."
+msgstr "spun läuft schon!\\nNur eine Instanz kann zur selben Zeit laufen."
+
+#: spun:30
+msgid ""
+"Bad value for 'waittime' variable.\\nMust be an integer between 1 and 10080."
+msgstr ""
+"Fehlerhafter Wert für die Variable 'waittime'.\\nMuss eine Ganzzahl zwischen "
+"1 und 10080 sein."
+
+#: spun:49
+msgid ":: Starting spun... "
+msgstr ":: Starte spun... "
+
+#: spun:51
+msgid "                                                     [Done]"
+msgstr "                                                     [Fertig]"
+
+#: spun:58
+msgid "Sorry, kdialog cannot be found."
+msgstr "Entschuldigung, kdialog wurde nicht gefunden."
+
+#: spun:65
+msgid "Minutes to wait between each check for updates:"
+msgstr "Wartezeit zwischen jeder Aktualisierungsprüfung in Minuten:"
+
+#: spun:66
+msgid "SPUN Config"
+msgstr "SPUN-Konfiguration"
+
+#: spun:69
+msgid "The value you specified is invalid."
+msgstr "Der angegebene Wert ist ungültig."
+
+#: spun:73
+msgid "Choose notification icon - SPUN Config"
+msgstr "Wähle das Benachrichtigungs-Icon - SPUN-Konfiguration"
+
+#: spun:75
+msgid ""
+"Configuration saved.\\nThe script must be restarted for changes to take "
+"effect."
+msgstr ""
+"Konfiguration gespeichert.\\nDas Skript muss neu gestartet werden, damit die "
+"Änderungen übernommen werden."
+
+#: spun:76
+msgid ""
+"Configuration could not be saved.\\nMake sure /etc/spun.conf exists and ~/."
+"spunrc is writable."
+msgstr ""
+"Konfiguration konnte nicht gespeichert werden.\\nStelle sicher, dass "
+"/etc/spun.conf existiert und dass ~/.spunrc beschreibbar ist."
+
+#: spun:97
+msgid "'There are updates available!'"
+msgstr "'Es sind Aktualisierungen verfügbar!'"
+
+#: spun:98
+msgid "Updates are available for the following package(s): \\n"
+msgstr "Aktualisierungen für folgende(s) Paket(e) sind verfügbar: \\n"
+
+#: spun:107
+msgid "/etc/spun.conf cannot be found or is invalid!"
+msgstr "/etc/spun.conf konnte nicht gefunden werden oder ist ungültig!"
