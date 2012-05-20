@@ -47,6 +47,7 @@ check() {
 
 daemon() {
   echo -n $":: Starting spun... "
+  mkdir -p $tmpdir
   dothings &
   echo $"                                                     [Done]"
 }
