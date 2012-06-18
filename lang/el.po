@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-13 15:06-0600\n"
+"POT-Creation-Date: 2012-06-18 16:05-0600\n"
 "PO-Revision-Date: 2012-05-15 00:21+0300\n"
 "Last-Translator: Neophytos Kolokotronis <tetris4@gmail.com>\n"
 "Language-Team: American English <>\n"
@@ -32,7 +32,8 @@ msgstr "Επιλογές:"
 #: spun:12
 msgid "  -g, --gui              show the kdialog configuration GUI"
 msgstr ""
-"  -g, --gui              εμφάνιση του kdialog γραφικού περιβάλλοντος ρύθμισης "
+"  -g, --gui              εμφάνιση του kdialog γραφικού περιβάλλοντος "
+"ρύθμισης "
 
 #: spun:20
 msgid "kdialog cannot be found"
@@ -54,31 +55,31 @@ msgstr ""
 msgid ":: Starting spun... "
 msgstr ":: Εκκίνηση spun... "
 
-#: spun:51
+#: spun:52
 msgid "                                                     [Done]"
 msgstr "                                                     [Ολοκληρώθηκε]"
 
-#: spun:58
+#: spun:59
 msgid "Sorry, kdialog cannot be found."
 msgstr "Συγγνώμη, δεν είναι δυνατή η εύρεση του kdialog."
 
-#: spun:65
+#: spun:66
 msgid "Minutes to wait between each check for updates:"
 msgstr "Λεπτά αναμονής ανάμεσα σε κάθε έλεγχο για ενημερώσεις:"
 
-#: spun:66
+#: spun:67
 msgid "SPUN Config"
 msgstr "Ρυθμίσεις SPUN"
 
-#: spun:69
+#: spun:70
 msgid "The value you specified is invalid."
 msgstr "Η καθορισμένη τιμή δεν είναι έγκυρη."
 
-#: spun:73
+#: spun:74
 msgid "Choose notification icon - SPUN Config"
 msgstr "Επιλέξτε εικονίδιο ειδοποίησης - Ρυθμίσεις SPUN"
 
-#: spun:75
+#: spun:76
 msgid ""
 "Configuration saved.\\nThe script must be restarted for changes to take "
 "effect."
@@ -86,22 +87,22 @@ msgstr ""
 "Οι ρυθμίσεις αποθηκεύτηκαν.\\nΠρέπει να επανεκκινήσετε το σενάριο για να "
 "εφαρμοστούν οι αλλαγές."
 
-#: spun:76
+#: spun:77
 msgid ""
 "Configuration could not be saved.\\nMake sure /etc/spun.conf exists and ~/."
 "spunrc is writable."
 msgstr ""
-"Οι ρυθμίσεις ήταν αδύνατο να αποθηκευτούν.\\nΣιγουρευτείτε ότι υπάρχει το "
-"/etc/spun.conf και το ~/.spunrc είναι εγγράψιμο."
+"Οι ρυθμίσεις ήταν αδύνατο να αποθηκευτούν.\\nΣιγουρευτείτε ότι υπάρχει το /"
+"etc/spun.conf και το ~/.spunrc είναι εγγράψιμο."
 
-#: spun:97
+#: spun:98
 msgid "'There are updates available!'"
 msgstr "'Υπάρχουν διαθέσιμες ενημερώσεις!'"
 
-#: spun:98
+#: spun:99
 msgid "Updates are available for the following package(s): \\n"
 msgstr "Υπάρχουν διαθέσιμες ενημερώσεις για τα ακόλουθα πακέτα: \\n"
 
-#: spun:107
+#: spun:109
 msgid "/etc/spun.conf cannot be found or is invalid!"
 msgstr "To /etc/spun.conf δεν ήταν δυνατό να ανευρεθεί ή δεν ήταν έγκυρο!"

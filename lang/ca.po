@@ -1,7 +1,5 @@
 # Header entry was created by Lokalize.
 #
-#: spun:10
-#: spun:9
 # Manuel Tortosa <manutortosa@chakra-project.org>, 2012.
 msgid ""
 msgstr ""
@@ -11,13 +9,17 @@ msgstr ""
 "Last-Translator: Manuel Tortosa <manutortosa@chakra-project.org>\n"
 "PO-Revision-Date: 2012-05-13 22:09+0200\n"
 "Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-18 16:05-0600\n"
+"PO-Revision-Date: 2012-05-13 22:09+0200\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.4\n"
 
-#: spun:10
 #: spun:9
 msgid "Simple pacman update notifier, v0.2.4"
 msgstr "Un notificador d'actualitzacions del Pacman senzill, v0.2.4"
@@ -54,31 +56,31 @@ msgstr ""
 msgid ":: Starting spun... "
 msgstr ":: S'està iniciant l'spun... "
 
-#: spun:51
+#: spun:52
 msgid "                                                     [Done]"
 msgstr "                                                     [Fet]"
 
-#: spun:58
+#: spun:59
 msgid "Sorry, kdialog cannot be found."
 msgstr "No s'ha pogut trobar el kdialog."
 
-#: spun:65
+#: spun:66
 msgid "Minutes to wait between each check for updates:"
 msgstr "Minuts d'espera entre cada comprovació de les actualitzacions:"
 
-#: spun:65
+#: spun:67
 msgid "SPUN Config"
 msgstr "Configuració de l'SPUN"
 
-#: spun:69
+#: spun:70
 msgid "The value you specified is invalid."
 msgstr "El valor que heu especificat no és vàlid."
 
-#: spun:73
+#: spun:74
 msgid "Choose notification icon - SPUN Config"
 msgstr "Trieu la icona de notificació - Configuració de l'SPUN"
 
-#: spun:75
+#: spun:76
 msgid ""
 "Configuration saved.\\nThe script must be restarted for changes to take "
 "effect."
@@ -86,24 +88,22 @@ msgstr ""
 "S'ha desat la configuració\\nL'script s'ha de reiniciar per tal que els "
 "canvis siguin efectius."
 
-#: spun:76
+#: spun:77
 msgid ""
-"Configuration could not be saved.\\nMake sure /etc/spun.conf exists and "
-"~/.spunrc is writable."
+"Configuration could not be saved.\\nMake sure /etc/spun.conf exists and ~/."
+"spunrc is writable."
 msgstr ""
 "No s'ha pogut desar la configuració\\nAssegureu-vos de que /etc/spun.conf "
 "existeix i de que ~/spunrc es escrivible."
 
-#: spun:97
+#: spun:98
 msgid "'There are updates available!'"
 msgstr "«Hi ha actualitzacions disponibles!!»"
 
-#: spun:98
+#: spun:99
 msgid "Updates are available for the following package(s): \\n"
-msgstr ""
-"Hi ha actualitzacions disponibles per als seguents paquets: \\n"
+msgstr "Hi ha actualitzacions disponibles per als seguents paquets: \\n"
 
-#: spun:107
+#: spun:109
 msgid "/etc/spun.conf cannot be found or is invalid!"
 msgstr "no s'ha pogut trobar /etc/spun.conf o no és vàlid!"
-

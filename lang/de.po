@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-05-13 15:06-0600\n"
+"POT-Creation-Date: 2012-06-18 16:05-0600\n"
 "PO-Revision-Date: 2012-05-14 07:34+0200\n"
 "Last-Translator: Michael Häsel <michael.haesel@googlemail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -52,31 +52,31 @@ msgstr ""
 msgid ":: Starting spun... "
 msgstr ":: Starte spun... "
 
-#: spun:51
+#: spun:52
 msgid "                                                     [Done]"
 msgstr "                                                     [Fertig]"
 
-#: spun:58
+#: spun:59
 msgid "Sorry, kdialog cannot be found."
 msgstr "Entschuldigung, kdialog wurde nicht gefunden."
 
-#: spun:65
+#: spun:66
 msgid "Minutes to wait between each check for updates:"
 msgstr "Wartezeit zwischen jeder Aktualisierungsprüfung in Minuten:"
 
-#: spun:66
+#: spun:67
 msgid "SPUN Config"
 msgstr "SPUN-Konfiguration"
 
-#: spun:69
+#: spun:70
 msgid "The value you specified is invalid."
 msgstr "Der angegebene Wert ist ungültig."
 
-#: spun:73
+#: spun:74
 msgid "Choose notification icon - SPUN Config"
 msgstr "Wähle das Benachrichtigungs-Icon - SPUN-Konfiguration"
 
-#: spun:75
+#: spun:76
 msgid ""
 "Configuration saved.\\nThe script must be restarted for changes to take "
 "effect."
@@ -84,22 +84,22 @@ msgstr ""
 "Konfiguration gespeichert.\\nDas Skript muss neu gestartet werden, damit die "
 "Änderungen übernommen werden."
 
-#: spun:76
+#: spun:77
 msgid ""
 "Configuration could not be saved.\\nMake sure /etc/spun.conf exists and ~/."
 "spunrc is writable."
 msgstr ""
-"Konfiguration konnte nicht gespeichert werden.\\nStelle sicher, dass "
-"/etc/spun.conf existiert und dass ~/.spunrc beschreibbar ist."
+"Konfiguration konnte nicht gespeichert werden.\\nStelle sicher, dass /etc/"
+"spun.conf existiert und dass ~/.spunrc beschreibbar ist."
 
-#: spun:97
+#: spun:98
 msgid "'There are updates available!'"
 msgstr "'Es sind Aktualisierungen verfügbar!'"
 
-#: spun:98
+#: spun:99
 msgid "Updates are available for the following package(s): \\n"
 msgstr "Aktualisierungen für folgende(s) Paket(e) sind verfügbar: \\n"
 
-#: spun:107
+#: spun:109
 msgid "/etc/spun.conf cannot be found or is invalid!"
 msgstr "/etc/spun.conf konnte nicht gefunden werden oder ist ungültig!"
