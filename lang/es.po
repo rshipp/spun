@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Lokalize 1.4\n"
 
 #: spun:9
-msgid "Simple pacman update notifier, v0.2.4"
+msgid "Simple pacman update notifier, v0.3"
 msgstr "Sencillo notificador de actualizaciones de pacman"
 
 #: spun:10

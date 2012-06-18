@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: spun:9
-msgid "Simple pacman update notifier, v0.2.4"
+msgid "Simple pacman update notifier, v0.3"
 msgstr ""
 
 #: spun:10
