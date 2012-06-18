@@ -98,7 +98,7 @@ msgstr ""
 
 #: spun:98
 msgid "'There are updates available!'"
-msgstr "«Hi ha actualitzacions disponibles!!»"
+msgstr "'Hi ha actualitzacions disponibles!'"
 
 #: spun:99
 msgid "Updates are available for the following package(s): \\n"
