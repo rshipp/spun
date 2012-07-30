@@ -1,11 +1,10 @@
 post_install() {
-  echo "To use this script, just add spun to your startup applications."
+  echo "spun will start automatically at login"
+  echo "==> want audio notifications?"
+  echo "==> after the first run, uncomment the 'playwith' and 'audio'"
+  echo "==> options in your ~/.spunrc"
 }
 
 post_upgrade() {
   post_install
-}
-
-post_remove() {
-  echo "Don't forget to remove spun from your startup applications!"
 }
