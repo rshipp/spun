@@ -1,0 +1,110 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Αντώνης Γέραλης <capoiosct@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-18 16:05-0600\n"
+"PO-Revision-Date: 2012-08-18 17:35+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.4\n"
+ 
+#: spun:9
+msgid "Simple pacman update notifier, v0.3"
+msgstr "Απλή ειδοποίηση ενημερώσεων pacman, v0.3"
+ 
+#: spun:10
+msgid "Usage: spun [OPTIONS]"
+msgstr "Χρήση: spun [επιλογές]"
+ 
+#: spun:11
+msgid "Options: "
+msgstr "Επιλογές:"
+ 
+#: spun:12
+msgid "  -g, --gui              show the kdialog configuration GUI"
+msgstr ""
+"  -g, --gui              εμφάνιση του γραφικού περιβάλλοντος διαμόρφωσης "
+"kdialog"
+ 
+#: spun:20
+msgid "kdialog cannot be found"
+msgstr "Δεν βρεθηκε το kdialog"
+ 
+#: spun:25
+msgid "spun is already running!\\nonly one instance can be run at a time."
+msgstr "Το spun εκτελείται ήδη!\\nεπιτρέπεται μόνο μία διεργασία κάθε φορά."
+ 
+#: spun:30
+msgid ""
+"Bad value for 'waittime' variable.\\nMust be an integer between 1 and 10080."
+msgstr ""
+"Μη έγκυρη τιμή για τη μεταβλητή 'waittime'.\\nΠρέπει να είναι ακέραιος μεταξύ "
+"1 και 10080."
+ 
+#: spun:49
+msgid ":: Starting spun... "
+msgstr ":: Εκκίνηση spun... "
+ 
+#: spun:52
+msgid "                                                     [Done]"
+msgstr "                                                     [Τέλος]"
+ 
+#: spun:59
+msgid "Sorry, kdialog cannot be found."
+msgstr "Δυστυχώς, δεν βρεθηκε το kdialog."
+ 
+#: spun:66
+msgid "Minutes to wait between each check for updates:"
+msgstr ""
+"Το διάστημα μεταξύ των ελέγχων για ενημερώσεις (λεπτά):"
+"Κάθε πότε γίνεται έλεγχος για ενημερώσεις (λεπτά):"
+ 
+#: spun:67
+msgid "SPUN Config"
+msgstr "Διαμόρφωση SPUN"
+ 
+#: spun:70
+msgid "The value you specified is invalid."
+msgstr "Η τιμή που δώσατε δεν είναι έγκυρη."
+ 
+#: spun:74
+msgid "Choose notification icon - SPUN Config"
+msgstr "Επιλογή εικονιδίου - Διαμόρφωση SPUN"
+ 
+#: spun:76
+msgid ""
+"Configuration saved.\\nThe script must be restarted for changes to take "
+"effect."
+msgstr ""
+"Οι ρυθμίσεις αποθηκεύτηκαν.\\nΤο σενάριο πρέπει να εκκινηθεί ξανά για "
+"την εφαρμογή των αλλαγών."
+ 
+#: spun:77
+msgid ""
+"Configuration could not be saved.\\nMake sure /etc/spun.conf exists and ~/."
+"spunrc is writable."
+msgstr ""
+"Οι ρυθμίσεις δεν αποθηκεύτηκαν.\\nΒεβαιωθείτε ότι το /etc/spun.conf υπάρχει "
+"και ότι το ~/."
+"spunrc είναι εγγράψιμο."
+ 
+#: spun:98
+msgid "'There are updates available!'"
+msgstr "'Υπάρχουν διαθέσιμες ενημερώσεις'"
+ 
+#: spun:99
+msgid "Updates are available for the following package(s): \\n"
+msgstr "Υπάρχουν διαθέσιμες ενημερώσεις για το ακόλουθα πακέτα: \\n"
+ 
+#: spun:109
+msgid "/etc/spun.conf cannot be found or is invalid!"
+msgstr "Το /etc/spun.conf δεν βρέθηκε ή δεν είναι έγκυρο!"
