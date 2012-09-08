@@ -15,7 +15,7 @@ optdepends=('kde-baseapps: for the kdialog gui')
 
 _gitname="${_pkgname}"
 _gitroot="git://github.com/george2/${_gitname}.git"
-_locales=( ca de el es fr it nl_BE pl pt_BR )
+_locales=( ca de el es fr it nl_BE nl_NL pl pt_BR )
 
 
 build() {
