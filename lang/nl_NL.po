@@ -1,0 +1,106 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# , 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-06-18 16:05-0600\n"
+"PO-Revision-Date: 2012-09-07 17:45+0200\n"
+"Last-Translator: \n"
+"Language-Team: Dutch <kde-i18n-doc@kde.org>\n"
+"Language: nl_BE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+ 
+#: spun:9
+msgid "Simple pacman update notifier, v0.3"
+msgstr "Eenvoudige pacman updatemelder, v0.3"
+ 
+#: spun:10
+msgid "Usage: spun [OPTIONS]"
+msgstr "Gebruik: spun [OPTIES]"
+ 
+#: spun:11
+msgid "Options: "
+msgstr "Opties: "
+ 
+#: spun:12
+msgid "  -g, --gui              show the kdialog configuration GUI"
+msgstr " -g, --gui               toont de kdialoog configuratie GUI"
+ 
+#: spun:20
+msgid "kdialog cannot be found"
+msgstr "kdialog kan niet gevonden worden"
+ 
+#: spun:25
+msgid "spun is already running!\\nonly one instance can be run at a time."
+msgstr "spun draait al!\\ner kan maar één instantie per keer draaien."
+ 
+#: spun:30
+msgid ""
+"Bad value for 'waittime' variable.\\nMust be an integer between 1 and 10080."
+msgstr ""
+"Slechte waarde voor de 'wachttijd' variable.\\nHet moet een integer tussen 1 "
+"en 10080 zijn."
+ 
+#: spun:49
+msgid ":: Starting spun... "
+msgstr ":: Spun starten... "
+ 
+#: spun:52
+msgid "                                                     [Done]"
+msgstr "                                                      [Gereed]"
+ 
+#: spun:59
+msgid "Sorry, kdialog cannot be found."
+msgstr "Sorry, kdialoog kon niet gevonden worden."
+ 
+#: spun:66
+msgid "Minutes to wait between each check for updates:"
+msgstr "Aantal minuten wachttijd tussen elke controle op updates: "
+ 
+#: spun:67
+msgid "SPUN Config"
+msgstr "SPUN Config"
+ 
+#: spun:70
+msgid "The value you specified is invalid."
+msgstr "De voorgestelde waarde is ongeldig."
+ 
+#: spun:74
+msgid "Choose notification icon - SPUN Config"
+msgstr "Kies meldingsicoon - SPUN Config"
+ 
+#: spun:76
+msgid ""
+"Configuration saved.\\nThe script must be restarted for changes to take "
+"effect."
+msgstr ""
+"Configuratie opgeslaan.\\nHet script moet herstart worden vooral wijzigingen "
+"plaats vinden."
+ 
+#: spun:77
+msgid ""
+"Configuration could not be saved.\\nMake sure /etc/spun.conf exists and ~/."
+"spunrc is writable."
+msgstr ""
+"Configuratie kon niet worden opgeslaan.\\nZorg er voor dat /etc/spun.conf "
+"bestaat en "
+"~/.spunrc beschrijfbaar is."
+ 
+#: spun:98
+msgid "'There are updates available!'"
+msgstr "'Er zijn updates beschikbaar!'"
+ 
+#: spun:99
+msgid "Updates are available for the following package(s): \\n"
+msgstr "Updates zijn beschikbaar voor de volgende pakketten: \\n"
+ 
+#: spun:109
+msgid "/etc/spun.conf cannot be found or is invalid!"
+msgstr "/etc/spun.conf kon niet gevonden worden of is ongeldig!"
