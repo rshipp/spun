@@ -41,7 +41,7 @@ isignored() {
 check() {
   [[ -f $tmpdir ]] || mkdir -p "$tmpdir"
   [[ -e "$tmpdir/local" ]] || ln -s /var/lib/pacman/local "$tmpdir"
-  eval $update >&2>>"$tmpdir/log"
+  [[ -z $update ]] && eval $update >&2>>"$tmpdir/log"
   eval $check | tee -a "$tmpdir/log"
 }
 
