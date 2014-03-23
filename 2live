@@ -4,7 +4,7 @@
 ed spun-live << EOF
 /Updates/c
     \"$"Run 'sudo pacman -Syu' to update.\n \\
-<a href=http://www.chakra-linux.org/wiki/index.php/Pacman>Visit the Chakra wiki</a> to learn more about Pacman. \n\\
+<a href=http://chakraos.org/wiki/index.php?title=Pacman>Visit the Chakra wiki</a> to learn more about Pacman. \n\\
 Updates are available for the following package(s): \n" "\${npkgz[*]}"\"
 .
 wq
